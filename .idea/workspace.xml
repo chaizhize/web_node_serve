@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2640594b-75f7-424d-9bb5-05f761f5c5e6" name="默认更改列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V9snVt5DZoVQYkjWzYo9XmWuFR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="555.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/555.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.555.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2640594b-75f7-424d-9bb5-05f761f5c5e6" name="默认更改列表" comment="" />
+      <created>1576676811930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576676811930</updated>
+      <workItem from="1576676813523" duration="1425000" />
+      <workItem from="1576684218693" duration="9149000" />
+      <workItem from="1576752947854" duration="8335000" />
+      <workItem from="1576808340119" duration="8130000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="744" y="321" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576809796824">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state x="744" y="321" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576809796824" />
+    <state x="744" y="321" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.-1057.1920.1057/65.23.1727.1097@65.23.1727.1097" timestamp="1576809575289" />
+    <state width="1709" height="303" key="GridCell.Tab.0.bottom" timestamp="1576751865657">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state width="1709" height="303" key="GridCell.Tab.0.bottom/0.-1057.1920.1057/55.23.1737.1097@55.23.1737.1097" timestamp="1576737206974" />
+    <state width="1709" height="303" key="GridCell.Tab.0.bottom/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576751865657" />
+    <state width="1709" height="303" key="GridCell.Tab.0.center" timestamp="1576751865656">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state width="1709" height="303" key="GridCell.Tab.0.center/0.-1057.1920.1057/55.23.1737.1097@55.23.1737.1097" timestamp="1576737206973" />
+    <state width="1709" height="303" key="GridCell.Tab.0.center/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576751865656" />
+    <state width="1709" height="303" key="GridCell.Tab.0.left" timestamp="1576751865655">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state width="1709" height="303" key="GridCell.Tab.0.left/0.-1057.1920.1057/55.23.1737.1097@55.23.1737.1097" timestamp="1576737206972" />
+    <state width="1709" height="303" key="GridCell.Tab.0.left/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576751865655" />
+    <state width="1709" height="303" key="GridCell.Tab.0.right" timestamp="1576751865657">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state width="1709" height="303" key="GridCell.Tab.0.right/0.-1057.1920.1057/55.23.1737.1097@55.23.1737.1097" timestamp="1576737206973" />
+    <state width="1709" height="303" key="GridCell.Tab.0.right/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576751865657" />
+    <state width="240" height="498" key="HiddenNamespacesPopup" timestamp="1576809739904">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state width="240" height="498" key="HiddenNamespacesPopup/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576809739904" />
+    <state width="239" height="498" key="HiddenNamespacesPopup/0.-1057.1920.1057/65.23.1727.1097@65.23.1727.1097" timestamp="1576809584332" />
+    <state x="428" y="210" key="SettingsEditor" timestamp="1576752933905">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state x="428" y="210" key="SettingsEditor/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576752933905" />
+    <state x="591" y="266" key="run.anything.popup" timestamp="1576760702029">
+      <screen x="60" y="23" width="1732" height="1097" />
+    </state>
+    <state x="591" y="266" key="run.anything.popup/0.-1057.1920.1057/60.23.1732.1097@60.23.1732.1097" timestamp="1576760702029" />
+    <state x="592" y="266" key="run.anything.popup/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576751863883" />
+    <state x="592" y="268" width="670" height="676" key="search.everywhere.popup" timestamp="1576753207121">
+      <screen x="62" y="23" width="1730" height="1097" />
+    </state>
+    <state x="592" y="268" width="670" height="676" key="search.everywhere.popup/0.-1057.1920.1057/62.23.1730.1097@62.23.1730.1097" timestamp="1576753207121" />
+  </component>
+</project>
