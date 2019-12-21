@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .blog_ul{
+
+        }
+        li{
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<script src="https://libs.cdnjs.net/jquery/3.4.1/jquery.js"></script>
+<script src="https://libs.cdnjs.net/axios/0.19.0-beta.1/axios.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/locale/zh-cn.js"></script>
+<body>
+<h1>博客登陆</h1>
+
+
+<ul class="blog_ul_login">
+w
+    <li>
+        <input type="text" placeholder="博客标题" class="new_blog_title"/>
+    </li>
+
+   <li>
+       <textarea type="text" placeholder="博客内容"  class="new_blog_textarea"></textarea>
+   </li>
+
+    <li>
+        <button class="newBlog">新建</button>
+    </li>
+</ul>
+
+</body>
+<script type="text/javascript">
+
+
+    const $blog_title = $('.new_blog_title')
+    const $blog_textarea = $('.new_blog_textarea')
+
+    $('.newBlog').unbind('click').bind('click',function () {
+        let title = $blog_title.val()
+        let content = $blog_textarea.val()
+        if(title && content){
+            newBlog(title,content)
+        }
+    })
+
+
+    function newBlog(title,content) {
+        let data = {
+            title,
+            content
+        }
+        let url = `/api/blog/new`
+        axios.post(url,data)
+            .then((res)=>{
+                console.log(res);
+                if(res.data.code !== 200){
+                    alert(res.data.message)
+                    return
+                }
+                window.location.href = `home.html`
+            })
+    }
+
+
+
+
+</script>
+</html>

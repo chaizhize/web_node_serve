@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .blog_ul{
+
+        }
+        li{
+            border-bottom: 1px solid #000;
+        }
+    </style>
+</head>
+<script src="https://libs.cdnjs.net/jquery/3.4.1/jquery.js"></script>
+<script src="https://libs.cdnjs.net/axios/0.19.0-beta.1/axios.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/locale/zh-cn.js"></script>
+<body>
+<h1>博客详情</h1>
+
+
+<ul class="blog_ul_detail"></ul>
+
+</body>
+<script type="text/javascript">
+    const $textBlog_ul = $('.blog_ul_detail')
+
+    getBlogDetails()
+    function getBlogDetails() {
+        let id = getQueryVariable('id')
+        let url = `/api/blog/details?id=${Number(id)}`
+        axios.get(url)
+            .then((res)=>{
+                console.log(res);
+                if(res.data.code !== 200){
+                    alert(res.data.message)
+                    return
+                }
+                const data = Object.assign({},res.data.data)
+                console.log(data);
+                if(!Object.keys(data).length)return;
+                let el = `
+                <li>
+                    <div>${data.title}</div>
+                    <div>${data.content}</div>
+                    <div>
+                        <span style="margin-right: 10px">${moment(data.createTime).format('YYYY MMMM Do , HH:mm:ss a')}</span>
+                        <span>${data.author}</span>
+                    </div>
+                </li>
+            `
+                $textBlog_ul.append(el)
+            })
+    }
+
+
+    function getQueryVariable(variable)
+    {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+    }
+
+</script>
+</html>

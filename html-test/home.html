@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .blog_ul{
+
+        }
+        li{
+            border-bottom: 1px solid #000;
+        }
+    </style>
+</head>
+<script src="https://libs.cdnjs.net/jquery/3.4.1/jquery.js"></script>
+<script src="https://libs.cdnjs.net/axios/0.19.0-beta.1/axios.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/locale/zh-cn.js"></script>
+<body>
+<h1>博客首页</h1>
+
+<h3 class="logOut">
+    <button>登出</button>
+</h3>
+
+<h3 class="blog_new">
+    <button>新建博客</button>
+</h3>
+
+<input class="blog_input_title" type="text" value="" placeholder="标题">
+<input class="blog_input_content" type="text" value="" placeholder="内容">
+<input class="blog_input_author"  type="text" value="" placeholder="作者">
+<button class="blog_inquire">查询</button>
+<ul class="blog_ul"></ul>
+
+</body>
+<script type="text/javascript">
+
+    const $textBlog_ul = $('.blog_ul')
+    $('.blog_inquire').unbind('click').bind('click',function () {
+        let title = $('.blog_input_title').val()
+        let content = $('.blog_input_content').val()
+
+        let author = $('.blog_input_author').val()
+        console.log(title,content,author);
+        getBlogList(title,content,author)
+    })
+    getBlogList()
+    function getBlogList(title = '',content = '',author = ''){
+        $textBlog_ul.empty()
+        let url = '/api/blog/list?isadmin=1'
+        url += `&title=${title}&content=${content}&author=${author}`
+        axios.get(url)
+            .then((res)=>{
+                console.log(res);
+                if(res.data.code !== 200){
+                    alert(res.data.message)
+                    return
+                }
+                const data = Object.assign([],res.data.data)
+                console.log(data);
+                if(!data.length)return;
+                let el = ''
+                data.forEach((item,index)=>{
+                    el  += `
+                <li id="${item.id}">
+                    <div>
+                        <span>${item.title}</span>
+                        <button id="${item.id}" onclick="editBlog">编辑</button>
+                        <button>删除</button>
+                    </div>
+                    <div>${item.content}</div>
+                    <div>
+                        <span style="margin-right: 10px">${moment(item.createTime).format('YYYY MMMM Do , HH:mm:ss a')}</span>
+                        <span>${item.author}</span>
+                    </div>
+                </li>
+            `
+                })
+                $textBlog_ul.append(el)
+            })
+    }
+    function editBlog(){
+        console.log(44444444);
+    }
+    handleBlogListDetails()
+
+
+    function handleBlogListDetails(){
+
+        $('.blog_ul').unbind('click').bind('click','li',function (event) {
+            window.location.href = `detail.html?id=${event.currentTarget.id}`
+        })
+    }
+
+    $('.logOut').unbind('click').bind('click',function () {
+        localStorage.removeItem('token')
+        window.location.href = 'login.html'
+    })
+    $('.blog_new').unbind('click').bind('click',function () {
+        console.log(3213123);
+        window.location.href = 'newBlog.html'
+    })
+
+
+</script>
+</html>

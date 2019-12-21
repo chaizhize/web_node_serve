@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .blog_ul{
+
+        }
+        li{
+            border-bottom: 1px solid #000;
+        }
+    </style>
+</head>
+<script src="https://libs.cdnjs.net/jquery/3.4.1/jquery.js"></script>
+<script src="https://libs.cdnjs.net/axios/0.19.0-beta.1/axios.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://libs.cdnjs.net/moment.js/2.24.0/locale/zh-cn.js"></script>
+<body>
+<h1>博客登陆</h1>
+
+
+<ul class="blog_ul_login">
+
+    <input type="text" class="blog_username">
+    <input type="text" class="blog_password">
+
+    <button class="login">登陆</button>
+</ul>
+
+</body>
+<script type="text/javascript">
+    isLogin()
+    function isLogin() {
+        if (localStorage.getItem('token')){
+            // window.location.href = `home.html`
+            // return false
+        }
+    }
+
+    const $blog_username = $('.blog_username')
+    const $blog_password = $('.blog_password')
+
+    $('.login').unbind('click').bind('click',function () {
+        let username = $blog_username.val()
+        let password = $blog_password.val()
+        getBlogDetails(username,password)
+
+    })
+
+
+    function getBlogDetails(username,password) {
+        let data = {
+            username,
+            password
+        }
+        let url = `/api/user/login`
+        axios.post(url,data)
+            .then((res)=>{
+                console.log(res);
+                if(res.data.code !== 200){
+                    alert(res.data.message)
+                    return
+                }
+                localStorage.setItem('token',res.data.data.cookieId)
+                window.location.href = `home.html`
+            })
+    }
+
+
+
+
+</script>
+</html>
