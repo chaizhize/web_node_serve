@@ -8,36 +8,37 @@ redisClient.on('error',err=>{
     console.log(err);
 })
 
-function set(key, val){
-    if(typeof val === 'object'){
-        console.log(val,'22233');
-        val = JSON.stringify(val)
-    }
-    console.log(key,'kkk',val);
-    redisClient.set(key,val,redis.print);
-}
-function get(key){
-    const promise = new Promise((resolve,reject)=>{
-        redisClient.get(key,(err,val)=>{
-            if(err){
-                reject(err);
-                return
-            }
-            if(val === null){
-                resolve(null,'xxx');
-                return;
-            }
-            try {
-                resolve(JSON.parse(val));
-            }catch (e) {
-                resolve(val)
-            }
-            // redisClient.quit()
-        })
-    })
-    return promise
-}
-module.exports = {
-    set,
-    get
-}
+// function set(key, val){
+//     if(typeof val === 'object'){
+//         console.log(val,'22233');
+//         val = JSON.stringify(val)
+//     }
+//     console.log(key,'kkk',val);
+//     redisClient.set(key,val,redis.print);
+// }
+// function get(key){
+//     const promise = new Promise((resolve,reject)=>{
+//         redisClient.get(key,(err,val)=>{
+//             if(err){
+//                 reject(err);
+//                 return
+//             }
+//             if(val === null){
+//                 resolve(null,'xxx');
+//                 return;
+//             }
+//             try {
+//                 resolve(JSON.parse(val));
+//             }catch (e) {
+//                 resolve(val)
+//             }
+//             // redisClient.quit()
+//         })
+//     })
+//     return promise
+// }
+// module.exports = {
+//     set,
+//     get
+// }
+module.exports = redisClient

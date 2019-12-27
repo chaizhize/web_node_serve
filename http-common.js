@@ -1,4 +1,5 @@
 const http = require('http');
+const path = require('path');
 const queryString = require('querystring')
 
 const server = http.createServer((req, res) => {
@@ -28,4 +29,8 @@ const server = http.createServer((req, res) => {
         })
     }
 })
-server.listen(8000)
+
+
+console.log(path.basename('/foo/bar/baz/asdf/quux.html'));
+
+// server.listen(8000)
